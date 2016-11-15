@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+<!--   <display-name>MyFirstServApp</display-name> -->
+
+<display-name>JSP Init App</display-name>
+
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+
+<!-- Servlet node defining name and class of the servlet -->
+<!-- <servlet> -->
+<!-- <servlet-name>xmlServlet</servlet-name>Name of the Servlet Can be other
+			than class name also-->
+<!-- <servlet-class>firstservlet.XmlServlet</servlet-class> Class Name with 
+			Package Name i.e. when xmlServlet is called this class is executed -->
+<!-- </servlet> -->
+
+<!-- Servlet mapping node mapps corresponding servlet name to url pattern -->
+<!-- <servlet-mapping> -->
+<!-- 	<servlet-name>xmlServlet</servlet-name> -->
+<!-- 	<url-pattern>/xmlServletName</url-pattern> -->
+<!-- </servlet-mapping> Takes One of the servlet defined here 
+			and maps to particular url -->
+			
+			
+<servlet>
+
+	<servlet-name>InitJSP</servlet-name>		<!-- Name of the JSP class Can be other
+												 than class name also-->
+			
+	<jsp-file>/initpage.jsp</jsp-file> 		<!-- Path to the jsp file -->
+
+	<init-param>							<!--Same as we have done in servlet-->
+		<param-name>DefaultUser</param-name>
+		<param-value>Default User</param-value>
+	</init-param>
+	
+</servlet>
+
+<!-- Servlet mapping node mapps corresponding servlet name to url pattern -->
+<servlet-mapping>
+
+	<servlet-name>InitJSP</servlet-name>
+	
+	<url-pattern>/initpage.jsp</url-pattern>
+	
+</servlet-mapping> <!-- Takes One of the servlet defined here 
+			and maps to particular url -->
+</web-app>
